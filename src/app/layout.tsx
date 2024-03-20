@@ -1,3 +1,5 @@
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
@@ -22,11 +24,13 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
+          'min-h-screen bg-background font-sans antialiased flex flex-col justify-between items-center',
           fontSans.variable
         )}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
